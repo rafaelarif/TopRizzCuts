@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Neue Plak';
+    src: url('fonts/Neue\ Plak\ Regular.ttf');
+    src: url('fonts/Neue\ Plak\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Plak';
+    src: url('fonts/Neue\ Plak\ Bold.ttf');
+    src: url('fonts/Neue\ Plak\ Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, html {
+    font-family: 'Neue Plak';
+}
+
+.logo {
+    display: block;
+    height: auto;
+    width: 215px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transform: translateY(-1px);
+}
+
+.navbar {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-nav > li{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+  
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.book-now {
+    background-color: #EA7373;
+    border-radius: 25px;
+    padding-left:20px !important;
+    padding-right:20px !important;
+    color: white !important;
+    line-height: 1.4;
+    transform: translateY(1px);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.book-now:hover {
+    color: #4A4A4B !important;
+}
+
+.book-now-active {
+    background-color: #EA7373;
+    border-radius: 25px;
+    padding-left:20px !important;
+    padding-right:20px !important;
+    color: #171718 !important;
+    line-height: 1.4;
+    transform: translateY(1px);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+}
+
+#boxes .card {
+    position: relative;
+    width: 400px;
+    height: 210px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    user-select: none;
+    transition: box-shadow 0.3s;
+}
+
+#boxes .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+#boxes .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: filter 0.3s;
+}
+
+#boxes .card:hover img {
+    filter: brightness(35%);
+}
+
+#boxes .card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#cta h1 {
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 1;
+}
+
+#cta, #carouselExampleControls p {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.carousel {
+    background-color: #EDE8E8;
+}
+
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+#about-us h1 {
+    font-weight: bold;
+    font-size: 96px;
+}
+
+.meet-the-barbers {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#barbers-grid h2 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#services-grid h1 {
+    font-weight: bold;
+    font-size: 96px;
+}
+
+#services-grid h2 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#services-grid .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#contact h1 {
+    font-weight: bold;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.marker {
+    background-image: url('assets/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+  
+.mapboxgl-popup-content {
+    text-align: center;
+    height:100px;
+}
+
+#booking-form h1 {
+    font-weight: bold;
+    font-size: 96px;
+}
+
+#booking-form .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;   
+}
+
+#booking-form .custom-input {
+    border-radius: 10px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    font-weight: bold;
+    font-size: 40px;
+    background-color: #676767;
+    border-radius: 25px;
+}
+
+.btn-primary:focus {
+    background-color: #676767;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: #232323;
+    outline: none !important;
+    box-shadow: none;
+}
+
+footer {
+    background-color: #232323;
+}
+
+footer h5 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1;
+}
+
+footer p {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.copyright {
+    background-color: #1E1E1E;
+}

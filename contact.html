@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Contact - Top Rizz Cuts</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="assets/logo-dark.svg" alt="Top Rizz Cuts"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link book-now" href="booking.html">BOOK NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h1 class="text-center mb-4">CONTACT INFO</h1>
+                    <ul class="text-center list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Location:</span> 160 Juan Tabo Blvd NE, Albuquerque, NM 87123
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Phone Number:</span> (505) 503-4455
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email:</span> info@toprizzcuts.com
+                        </li>
+                    </ul>
+                    <h1 class="text-center mt-4 mb-4">HOURS OF OPERATION</h1>
+                    <ul class="text-center list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Monday to Thursday:</span> 9:00AM - 7:00PM
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Friday:</span> 9:00AM - 6:00PM
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Saturday:</span> 9:00AM - 5:00PM
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Sunday:</span> 10:00AM - 4:00PM
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white">
+        <div class="container p-5">
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-center">
+                    <img src="assets/logo-light.svg" alt="Top Rizz Cuts" width="380" height="90">
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="mb-4">CONTACT</h5>
+                    <p>160 Juan Tabo Blvd NE<br>
+                    Albuquerque, NM 87123<br>
+                    (505) 503-4455<br>
+                    info@toprizzcuts.com</p>
+                </div>
+                <div class="col-lg-4 mb-lg-0 d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="mb-4">HOURS OF OPERATION</h5>
+                    <p>Mon to Thu: 9AM - 7PM<br>
+                    Fri: 9AM - 6PM<br>
+                    Sat: 9AM - 5PM<br>
+                    Sun: 10AM - 4PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container text-center py-3">
+                <small>&copy; 2023 Top Rizz Cuts. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmFmYWVsYXJpZiIsImEiOiJjbGlyb25sZzAwaHM0M2tvMXY5a3l0NHQzIn0.XTKtQzDRw4GO7QDiQkaPgw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [-106.51423133177293, 35.072160850414164],
+            zoom: 18,
+        });
+
+        const geojson = {
+            type: 'FeatureCollection',
+            features: [
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-106.51423133177293, 35.072160850414164]
+                    },
+                    properties: {
+                        title: 'Top Rizz Cuts',
+                        description: '160 Juan Tabo Blvd NE, Albuquerque, NM 87123'
+                    }
+                },
+            ]
+        };
+
+        for (const feature of geojson.features) {
+            // create a HTML element for each feature
+            const el = document.createElement('div');
+            el.className = 'marker';
+            
+            // make a marker for each feature and add it to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(feature.geometry.coordinates)
+                .setPopup(
+                    new mapboxgl.Popup({ offset: 25 }) // add popups
+                        .setHTML(
+                        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                        )
+                )
+            .addTo(map);
+        }
+    </script>
+</body>
+</html>

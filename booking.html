@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Booking - Top Rizz Cuts</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="assets/logo-dark.svg" alt="Top Rizz Cuts"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link book-now-active" href="booking.html">BOOK NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Form -->
+    <div id="booking-form" class="container">
+        <h1 class="text-center m-5">BOOKING</h1>
+        <form id="bookingForm">
+            <div class="row mb-5 g-5">
+                <div class="col-md-4">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control custom-input" id="fullName">
+                </div>
+                <div class="col-md-4">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control custom-input" id="date">
+                </div>
+                <div class="col-md-4">
+                    <label for="service" class="form-label">Service</label>
+                    <select class="form-select custom-input" id="service">
+                        <option selected disabled value="">Select a service</option>
+                        <option>$30 | Haircut</option>
+                        <option>$30 | Hot Lather Shave</option>
+                        <option>$15 | Beard Trim</option>
+                        <option>$35 | Coloring</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3 g-5">
+                <div class="col-md-4">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control custom-input" id="email">
+                </div>
+                <div class="col-md-4">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="time" class="form-control custom-input" id="time">
+                </div>
+                <div class="col-md-4">
+                    <label for="barber" class="form-label">Barber</label>
+                    <select class="form-select custom-input" id="barber">
+                        <option selected disabled value="">Select a barber</option>
+                        <option>Tony Rizzoli</option>
+                        <option>Marcus Williams</option>
+                        <option>Alex Johnson</option>
+                        <option>David Thompson</option>
+                        <option>Daniel Ramirez</option>
+                        <option>Ryan Martinez</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center p-5 mb-4">
+                <button id="book-btn" type="submit" class="btn btn-primary btn-lg">BOOK</button>
+            </div>
+        </form>
+        <div id="confirmation" class="alert alert-success mt-3" style="display: none;"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Booking Confirmation</h5>
+                </div>
+                <div class="modal-body" id="confirmationMessage" style="white-space: pre-wrap;"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='index.html'">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white">
+        <div class="container p-5">
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-center">
+                    <img src="assets/logo-light.svg" alt="Top Rizz Cuts" width="380" height="90">
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="mb-4">CONTACT</h5>
+                    <p>160 Juan Tabo Blvd NE<br>
+                    Albuquerque, NM 87123<br>
+                    (505) 503-4455<br>
+                    info@toprizzcuts.com</p>
+                </div>
+                <div class="col-lg-4 mb-lg-0 d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="mb-4">HOURS OF OPERATION</h5>
+                    <p>Mon to Thu: 9AM - 7PM<br>
+                    Fri: 9AM - 6PM<br>
+                    Sat: 9AM - 5PM<br>
+                    Sun: 10AM - 4PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container text-center py-3">
+                <small>&copy; 2023 Top Rizz Cuts. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
